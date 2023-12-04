@@ -1,0 +1,12 @@
+C:\Users\Bishoy Moheb\Documents\Visual Studio 2019\Proj 2019\Saqaya_UserWebAPI\SUser.CLDomain\bin\Debug\net5.0\SUser.CLDomain.deps.json
+C:\Users\Bishoy Moheb\Documents\Visual Studio 2019\Proj 2019\Saqaya_UserWebAPI\SUser.CLDomain\bin\Debug\net5.0\SUser.CLDomain.dll
+C:\Users\Bishoy Moheb\Documents\Visual Studio 2019\Proj 2019\Saqaya_UserWebAPI\SUser.CLDomain\bin\Debug\net5.0\ref\SUser.CLDomain.dll
+C:\Users\Bishoy Moheb\Documents\Visual Studio 2019\Proj 2019\Saqaya_UserWebAPI\SUser.CLDomain\bin\Debug\net5.0\SUser.CLDomain.pdb
+C:\Users\Bishoy Moheb\Documents\Visual Studio 2019\Proj 2019\Saqaya_UserWebAPI\SUser.CLDomain\obj\Debug\net5.0\SUser.CLDomain.csproj.AssemblyReference.cache
+C:\Users\Bishoy Moheb\Documents\Visual Studio 2019\Proj 2019\Saqaya_UserWebAPI\SUser.CLDomain\obj\Debug\net5.0\SUser.CLDomain.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Bishoy Moheb\Documents\Visual Studio 2019\Proj 2019\Saqaya_UserWebAPI\SUser.CLDomain\obj\Debug\net5.0\SUser.CLDomain.AssemblyInfoInputs.cache
+C:\Users\Bishoy Moheb\Documents\Visual Studio 2019\Proj 2019\Saqaya_UserWebAPI\SUser.CLDomain\obj\Debug\net5.0\SUser.CLDomain.AssemblyInfo.cs
+C:\Users\Bishoy Moheb\Documents\Visual Studio 2019\Proj 2019\Saqaya_UserWebAPI\SUser.CLDomain\obj\Debug\net5.0\SUser.CLDomain.csproj.CoreCompileInputs.cache
+C:\Users\Bishoy Moheb\Documents\Visual Studio 2019\Proj 2019\Saqaya_UserWebAPI\SUser.CLDomain\obj\Debug\net5.0\SUser.CLDomain.dll
+C:\Users\Bishoy Moheb\Documents\Visual Studio 2019\Proj 2019\Saqaya_UserWebAPI\SUser.CLDomain\obj\Debug\net5.0\ref\SUser.CLDomain.dll
+C:\Users\Bishoy Moheb\Documents\Visual Studio 2019\Proj 2019\Saqaya_UserWebAPI\SUser.CLDomain\obj\Debug\net5.0\SUser.CLDomain.pdb
