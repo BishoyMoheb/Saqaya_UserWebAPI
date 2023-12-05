@@ -3,15 +3,17 @@ using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using SUser.CLDataAccess.EFContext;
 
 namespace SUser.CLDataAccess.Migrations
 {
     [DbContext(typeof(MUserDbContext))]
-    partial class MUserDbContextModelSnapshot : ModelSnapshot
+    [Migration("20231205114131_Mig_JSTokens")]
+    partial class Mig_JSTokens
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder

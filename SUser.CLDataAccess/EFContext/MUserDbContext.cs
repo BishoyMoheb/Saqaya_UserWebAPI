@@ -18,5 +18,7 @@ namespace SUser.CLDataAccess.EFContext
         }
 
         public DbSet<MUser> DbS_Users { get; set; }
+
+        public DbSet<MJwtSTokens> DbS_JSTokens { get; set; }
     }
 }

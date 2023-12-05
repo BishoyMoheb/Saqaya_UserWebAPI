@@ -25,6 +25,12 @@ namespace SUser.CLDataAccess.RepositoryPattern
             return mUser_New;
         }
 
+        public void AddJwtSTokens(MJwtSTokens mJwtSTokens)
+        {
+            _mUserDbContext.DbS_JSTokens.AddAsync(mJwtSTokens);
+            _mUserDbContext.SaveChanges();
+        }
+
         public async void DeleteUserAsync(int Id)
         {
             MUser User_ToDelete = await _mUserDbContext.DbS_Users.FindAsync(Id);
@@ -36,6 +42,12 @@ namespace SUser.CLDataAccess.RepositoryPattern
         {
             MUser User_ToGet = await _mUserDbContext.DbS_Users.FindAsync(Id);
             return User_ToGet;
+        }
+
+        public async Task<MJwtSTokens> GetJSTokenAsync(string AToken)
+        {
+            MJwtSTokens JSToken_ToGet = await _mUserDbContext.DbS_JSTokens.FirstOrDefaultAsync(t => t.JwtSToken == AToken);
+            return JSToken_ToGet;
         }
 
         public async Task<IEnumerable<MUser>> Get_ALL_Async()
