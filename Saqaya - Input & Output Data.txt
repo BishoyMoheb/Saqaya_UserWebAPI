@@ -24,3 +24,18 @@
 ##### OUTPUT DATA ######
 {"id":"0932d91b-ca9f-4509-b968-89c4b9e4681f",
 "accessToken":"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE3MDEzNTUyMDMsImlzcyI6ImluZm9Ac2FxYXlhLmNvbSIsImF1ZCI6ImluZm9Ac2FxYXlhLmNvbSJ9.TR5svPUY_ahXqNBxDUuI5ZqCM-RN41sXhGm7Df44fZg"}
+
+
+
+
+
+##### INPUT DATA ######{
+    "FirstName":"Parthy",
+    "LastName":"Samy",
+    "Email":"info@saqaya.com",
+    "IsMarketingConsent":false
+}
+
+##### OUTPUT DATA ######
+{"id":"907ae3c0-f559-4968-862b-f2905567ae6f",
+"accessToken":"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE3MDE3ODYyMjksImlzcyI6ImluZm9Ac2FxYXlhLmNvbSIsImF1ZCI6ImluZm9Ac2FxYXlhLmNvbSJ9.KPJfuARTdLqpmycsaX4orW7A3XXlGfvXbqS9UTBNbFI"}
