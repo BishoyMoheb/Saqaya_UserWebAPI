@@ -51,6 +51,7 @@ namespace SUser.WebAPI.Controllers
         [HttpPost]
         public async Task<IActionResult> Do_AddUserAsync([FromBody] VM_MUser vmMUser)
         {
+            // Adding data to IdUserExtension table
             var NewUser = new IdUserExtension
             {
                 UserName = vmMUser.FirstName + vmMUser.LastName,
@@ -63,6 +64,7 @@ namespace SUser.WebAPI.Controllers
             if (IsCreated.Succeeded)
             {
                 string NewId = await _signInM_ID.UserManager.GetUserIdAsync(NewUser);
+                // Adding data to MUser table
                 MUser mUser = new MUser
                 {
                     UId = NewId,
@@ -72,6 +74,7 @@ namespace SUser.WebAPI.Controllers
                     IsMarketingConsent = vmMUser.IsMarketingConsent
                 };
                 UserAdded = await _userRepositoryI.AddUserAsync(mUser);
+                // Adding the JWT Access Token
                 var SSecurityKey = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(_configI["Jwt:Key"]));
                 var SignCredentials = new SigningCredentials(SSecurityKey, SecurityAlgorithms.HmacSha256);
                 var JSToken = new JwtSecurityToken(_configI["Jwt:Issuer"],
@@ -80,6 +83,13 @@ namespace SUser.WebAPI.Controllers
                                                    expires: DateTime.Now.AddMinutes(120),
                                                    signingCredentials: SignCredentials);
                 SAccessToken = new JwtSecurityTokenHandler().WriteToken(JSToken);
+                // Adding data to MJwtSTokens table
+                MJwtSTokens mJSTokens = new MJwtSTokens
+                {
+                    UserId = UserAdded.UId,
+                    JwtSToken = SAccessToken
+                };
+                _userRepositoryI.AddJwtSTokens(mJSTokens);
             }
             return Ok(new { Id = UserAdded.UId, AccessToken = SAccessToken });
         }
@@ -91,7 +101,8 @@ namespace SUser.WebAPI.Controllers
         public async Task<IActionResult> Do_GetUserAsync(string Id, string AccessToken)
         {
             MUser UserToGet = await _userRepositoryI.GetUserAsync(Id);
-            if (UserToGet == null)
+            MJwtSTokens JSTokenToGet = await _userRepositoryI.GetJSTokenAsync(AccessToken);
+            if (UserToGet == null && JSTokenToGet == null)
                 return NotFound(Id);
             if (UserToGet.IsMarketingConsent)
                 return Ok(UserToGet);
